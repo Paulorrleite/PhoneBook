@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/PhoneBook.Application/PhoneBook.Application.csproj" Id="bea52357-78d9-41c2-ae28-d48e158d87aa" />
+    <Project Path="src/PhoneBook.Domain/PhoneBook.Domain.csproj" Id="a4c06010-53fb-4ab0-ac29-73c6aebd8aee" />
+    <Project Path="src/PhoneBook.Infrastructure/PhoneBook.Infrastructure.csproj" Id="aaa41c09-e2df-4167-9f3a-6158c8d05adb" />
+  </Folder>
+</Solution>

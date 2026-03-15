@@ -1,7 +1,7 @@
-﻿using PhoneBook.Domain.Enums;
+﻿using PhoneBook.Domain.Entities.Abstraction;
+using PhoneBook.Domain.Enums;
 using PhoneBook.Domain.Exceptions;
 using PhoneBook.Domain.Exceptions.Phone;
-using PhoneBook.Shared.Entities;
 
 namespace PhoneBook.Domain;
 

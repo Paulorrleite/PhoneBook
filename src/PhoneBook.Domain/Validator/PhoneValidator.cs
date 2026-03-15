@@ -1,14 +1,16 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace PhoneBook.Domain.Exceptions.Phone;
+namespace PhoneBook.Domain.Exceptions;
 
 public static class PhoneValidator
 {
     private static readonly Regex PhoneRegex =
         new(@"^\+[1-9]\d{1,14}$", RegexOptions.Compiled);
 
-    public static bool IsValid(string telefone)
+    public static bool IsValid(Phone phone)
     {
-        return PhoneRegex.IsMatch(telefone);
+        var completePhonenumber = $"+{phone.DDD}{phone.Number}";
+
+        return PhoneRegex.IsMatch(completePhonenumber);
     }
 }

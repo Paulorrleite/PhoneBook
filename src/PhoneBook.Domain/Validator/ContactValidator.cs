@@ -1,7 +1,4 @@
-﻿using PhoneBook.Domain.Entities;
-using PhoneBook.Domain.Exceptions.Phone;
-
-namespace PhoneBook.Domain.Validator;
+﻿namespace PhoneBook.Domain.Validator;
 
 public class ContactValidator
 {
@@ -13,10 +10,10 @@ public class ContactValidator
     {
         if (string.IsNullOrWhiteSpace(firstName))
             return false;
-        
+
         if (phone is null)
             return false;
-        
+
         if (email != null)
             if (!EmailValidator.IsValid(email))
                 return false;

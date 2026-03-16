@@ -1,7 +1,6 @@
 ﻿using PhoneBook.Domain.Entities;
 using PhoneBook.Domain.Entities.Abstraction;
 using PhoneBook.Domain.Exceptions;
-using PhoneBook.Domain.Exceptions.Phone;
 using PhoneBook.Domain.Validator;
 
 namespace PhoneBook.Domain;

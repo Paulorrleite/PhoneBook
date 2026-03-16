@@ -1,7 +1,6 @@
 ﻿using PhoneBook.Domain.Entities.Abstraction;
 using PhoneBook.Domain.Enums;
 using PhoneBook.Domain.Exceptions;
-using PhoneBook.Domain.Exceptions.Phone;
 
 namespace PhoneBook.Domain;
 
@@ -20,9 +19,9 @@ public class Phone : Entity
 
     public Phone CreatePhone(string DDD, int number, PhoneType phoneType)
     {
-        var phoneNumber = DDD + number.ToString();
+        var phone = new Phone(DDD, number, phoneType);
 
-        if (!PhoneValidator.IsValid(phoneNumber))
+        if (!PhoneValidator.IsValid(phone))
             throw new DomainExceptions("Invalid phone number.");
 
         return new Phone(DDD, number, phoneType);

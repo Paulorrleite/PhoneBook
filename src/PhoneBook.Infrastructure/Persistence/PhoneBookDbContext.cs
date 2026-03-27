@@ -10,4 +10,6 @@ public class PhoneBookDbContext : DbContext
     }
 
     public DbSet<Contact> Contacts => Set<Contact>();
+
+    public DbSet<Phone> Phones => Set<Phone>();
 }

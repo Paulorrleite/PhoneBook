@@ -1,10 +1,5 @@
 ﻿namespace PhoneBook.Domain.Repositories;
 
-public interface IContactRepository
+public interface IContactRepository : IBaseRepository<Contact>
 {
-    Task AddAsync(Contact contact);
-
-    Task UpdateAsync(Contact contact);
-
-    Task DeleteAsync(Contact contact);
 }

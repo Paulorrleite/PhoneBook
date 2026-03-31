@@ -1,8 +1,11 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="PhoneBook.Api/PhoneBook.Api.csproj" Id="422efb66-0238-42aa-ab8d-48e8875d31bd" />
     <Project Path="src/PhoneBook.Application/PhoneBook.Application.csproj" Id="bea52357-78d9-41c2-ae28-d48e158d87aa" />
     <Project Path="src/PhoneBook.Domain/PhoneBook.Domain.csproj" Id="a4c06010-53fb-4ab0-ac29-73c6aebd8aee" />
     <Project Path="src/PhoneBook.Infrastructure/PhoneBook.Infrastructure.csproj" Id="aaa41c09-e2df-4167-9f3a-6158c8d05adb" />
-    <Project Path="src/PhoneBook.WebApi/PhoneBook.WebApi.csproj" Id="4df2a11d-902a-4e83-87f7-04445a9743a6" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/PhoneBook.DomainTests/PhoneBook.DomainTests.csproj" Id="101b70fc-8821-4b11-9e15-eca9d282240b" />
   </Folder>
 </Solution>

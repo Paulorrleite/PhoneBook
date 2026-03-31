@@ -17,7 +17,7 @@ public class Phone : Entity
         PhoneType = phoneType;
     }
 
-    public Phone CreatePhone(string DDD, int number, PhoneType phoneType)
+    public static Phone CreatePhone(string DDD, int number, PhoneType phoneType)
     {
         var phone = new Phone(DDD, number, phoneType);
 

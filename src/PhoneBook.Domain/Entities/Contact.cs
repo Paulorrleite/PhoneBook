@@ -26,14 +26,24 @@ public class Contact : Entity
         BirthDate = birthDate;
     }
 
-    public Contact CreateContact(string firstName,
-                                 string? lastName,
-                                 Phone phone,
-                                 string? email,
-                                 DateOnly birthDate)
+    public static Contact CreateContact(
+    string firstName,
+    string? lastName,
+    Phone phone,
+    string? email,
+    DateOnly birthDate)
     {
-        if (!ContactValidator.IsValid(firstName, lastName, phone, email, birthDate))
-            throw new DomainExceptions("Invalid contact data.");
+        if (string.IsNullOrWhiteSpace(firstName))
+            throw new DomainExceptions("First name can't be empty.");
+
+        if (phone is null)
+            throw new DomainExceptions("Phone should be informed.");
+
+        if (email != null && !EmailValidator.IsValid(email))
+            throw new DomainExceptions("Invalid email.");
+
+        if (birthDate < DateOnly.FromDateTime(DateTime.Today).AddYears(-150))
+            throw new DomainExceptions("Invalid birthdate.");
 
         return new Contact(firstName, lastName, phone, email, birthDate);
     }

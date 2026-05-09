@@ -7,17 +7,17 @@ namespace PhoneBook.Domain;
 public class Phone : Entity
 {
     public string DDD { get; private set; }
-    public int Number { get; private set; }
+    public string Number { get; private set; }
     public PhoneType PhoneType { get; private set; }
 
-    private Phone(string DDD, int number, PhoneType phoneType)
+    private Phone(string DDD, string number, PhoneType phoneType)
     {
         this.DDD = DDD;
         Number = number;
         PhoneType = phoneType;
     }
 
-    public static Phone CreatePhone(string DDD, int number, PhoneType phoneType)
+    public static Phone CreatePhone(string DDD, string number, PhoneType phoneType)
     {
         var phone = new Phone(DDD, number, phoneType);
 

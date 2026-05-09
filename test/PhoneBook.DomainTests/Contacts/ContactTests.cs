@@ -11,7 +11,7 @@ public class ContactTests
     public void CreateContact_EmptyFirstName_ShouldThrowError()
     {
         // Arrange
-        var phone = Phone.CreatePhone("48", 999999999, PhoneType.Personal);
+        var phone = Phone.CreatePhone("48", "999999999", PhoneType.Personal);
         var now = DateOnly.FromDateTime(DateTime.Now);
 
         // Act
@@ -41,7 +41,7 @@ public class ContactTests
     public void CreateContact_InvalidBirthDate_ShouldThrowError()
     {
         // Arrange
-        var phone = Phone.CreatePhone("48", 999999999, PhoneType.Personal);
+        var phone = Phone.CreatePhone("48", "999999999", PhoneType.Personal);
         var now = DateOnly.FromDateTime(DateTime.Now);
 
         // Act

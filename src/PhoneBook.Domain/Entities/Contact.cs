@@ -38,11 +38,13 @@ public class Contact : Entity
 
         if (phone is null)
             throw new DomainExceptions("Phone should be informed.");
+        if (!PhoneValidator.IsValid(phone))
+            throw new DomainExceptions("Invalid phone number format.");
 
         if (email != null && !EmailValidator.IsValid(email))
             throw new DomainExceptions("Invalid email.");
 
-        if (birthDate < DateOnly.FromDateTime(DateTime.Today).AddYears(-150))
+        if (birthDate < DateOnly.FromDateTime(DateTime.Today).AddYears(-150) || birthDate > DateOnly.FromDateTime(DateTime.Today))
             throw new DomainExceptions("Invalid birthdate.");
 
         return new Contact(firstName, lastName, phone, email, birthDate);
